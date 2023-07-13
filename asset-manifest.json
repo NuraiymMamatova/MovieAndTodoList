@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/movie-todoList/static/css/main.32dfcf9f.css",
+    "main.js": "/movie-todoList/static/js/main.2739df29.js",
+    "index.html": "/movie-todoList/index.html",
+    "main.32dfcf9f.css.map": "/movie-todoList/static/css/main.32dfcf9f.css.map",
+    "main.2739df29.js.map": "/movie-todoList/static/js/main.2739df29.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.32dfcf9f.css",
+    "static/js/main.2739df29.js"
+  ]
+}

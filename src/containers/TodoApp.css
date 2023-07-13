@@ -1,0 +1,104 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+.todo {
+  background-color: #68c5ff;
+  padding: 120px;
+}
+
+button {
+  border-radius: 13px;
+  padding: 7px 15px;
+}
+
+.text-of-task {
+  outline: none;
+  border: 1px solid #004aad;
+  padding: 5px;
+  width: 20rem;
+}
+
+input[type="checkbox"] {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+input[type="checkbox"]:checked {
+  background: #00bf63;
+  appearance: none;
+  width: 12px;
+  height: 12px;
+  border: 1px solid gray;
+}
+
+input[type="checkbox"]::after {
+  font-weight: 900;
+  content: "\2713";
+  font-size: 8px;
+  color: white;
+}
+
+.form {
+  text-align: center;
+  padding-top: 30px;
+}
+
+li > div {
+  display: flex;
+  gap: 20px;
+}
+
+.form label {
+  color: #004aad;
+}
+
+.task-list {
+  padding: 20px;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  color: white;
+  gap: 10px;
+}
+
+.task-list-item {
+  background-color: #1c93d2;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.task-list-item > div {
+  display: flex;
+  align-items: center;
+}
+
+.main-container {
+  margin: auto;
+  background-color: white;
+  width: 600px;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.main-heading {
+  padding-bottom: 20px;
+}
+
+.form > button {
+  width: 15%;
+}
+
+.not-found {
+  color: #474a51;
+  text-align: center;
+}

@@ -1,0 +1,56 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 40px;
+  background-color: #073698;
+  color: #fff;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 20px 0px 20px 0px;
+}
+
+.movie-item {
+  display: flex;
+  height: 25vh;
+  width: 60%;
+  border-radius: 10px;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.1), 0 10px 10px rgba(0, 0, 0, 0.1);
+}
+
+.img-box {
+  width: 35%;
+  height: 100%;
+}
+
+img {
+  object-fit: cover;
+  height: 25vh;
+  width: 100%;
+  border-radius: 10px 0px 0px 10px;
+}
+
+.info-box {
+  padding: 15px;
+}
+
+.rating {
+  display: inline-block;
+  background-color: #e77d3b;
+  color: #fff;
+  padding: 7px 15px;
+  border-radius: 15px;
+}
+
+.title {
+  padding-bottom: 10px;
+}
+
+.rating-and-button-box {
+  display: flex;
+  gap: 10px;
+}

@@ -1,0 +1,24 @@
+.delete-button {
+  padding: 7px 15px;
+  border-radius: 7px;
+}
+
+.update-button {
+  padding: 7px 20px;
+  border-radius: 7px;
+}
+
+button {
+  color: #fff;
+  border: none;
+  border-radius: 9px;
+  padding: 3px 30px;
+  font-size: medium;
+  height: 5vh;
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+.cancel-button {
+  color: #00329e;
+}

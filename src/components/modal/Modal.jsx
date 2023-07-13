@@ -47,7 +47,7 @@ const Modal = ({
 
       let id = {};
 
-      if (buttonTitle === "Save") {
+      if (buttonTitle === "Save") { 
         id = movieForUpdate.id;
         saveOrUpdate = "update";
       } else {

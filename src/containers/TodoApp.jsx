@@ -26,11 +26,12 @@ function TodoApp() {
   const [data, setData] = useState("");
 
   const saveOnChange = (event) => {
+    // бул функция биздин инпуттагы маани озгоргон сайын значениесин сактап турат
     event.preventDefault();
     setData(event.target.value);
   };
 
-  const saveData = () => {
+  const saveTodo = () => {
     if (!data) {
       return alert("Поле должно быть заполнено!");
     }
@@ -48,6 +49,11 @@ function TodoApp() {
   };
 
   const changeHandler = (dataId) => {
+    /* бул функция биздин тудунун `completed` свойствосун озгортот
+      массивти аралап эгерде бизге келип жаткан id массивтин ичиндеги 
+    тудунун id-сине барабар болсо биз анын завершено деген свойствосун 
+    озгортобуз
+     */
     setUsersData((prevData) => {
       return prevData.map((data) => {
         if (data.id === dataId) {
@@ -78,38 +84,47 @@ function TodoApp() {
           <Button
             title="add"
             color="#e2316c"
-            onClick={(event) => saveData(event)}
+            onClick={(event) => saveTodo(event)}
           />
         </div>
         <ul className="task-list">
-          {usersData.length ? (
-            usersData.map((data) => (
-              <li key={data.id} className="task-list-item">
-                <p
-                  style={{
-                    textDecoration: data.completed
-                      ? "line-through #e53b43"
-                      : "none",
-                  }}
-                >
-                  {data.title}
-                </p>
-                <div>
-                  <Input
-                    inputType="checkbox"
-                    onChange={() => changeHandler(data.id)}
-                    checked={data.completed}
-                  />
-                  <Button
-                    title="delete"
-                    color="#ff5758"
-                    onClick={() => deleteData(data.id)}
-                  />
-                </div>
-              </li>
-            ))
+          {/* условный рендеринг */}
+          {usersData.length ? ( // эгерде бизде туду бар болсо
+            usersData.map(
+              (
+                data // биз тудуларды чыгарабыз
+              ) => (
+                <li key={data.id} className="task-list-item">
+                  <p
+                    style={{
+                      // эгерду завершен true болсо анда биз тудуну зачеркивайтетип экаранга чыгарабыз андай болбосо зачеркивайтетпейбиз
+                      textDecoration: data.completed
+                        ? "line-through #e53b43"
+                        : "none",
+                    }}
+                  >
+                    {data.title}
+                  </p>
+                  <div>
+                    <Input
+                      inputType="checkbox"
+                      onChange={() => changeHandler(data.id)}
+                      checked={data.completed}
+                    />
+                    <Button
+                      title="delete"
+                      color="#ff5758"
+                      onClick={() => deleteData(data.id)}
+                    />
+                  </div>
+                </li>
+              )
+            )
           ) : (
-            <h1 className="not-found">You don't have any tasks!</h1>
+            //туду жок болсо
+            <h1 className="not-found">
+              You don't have any tasks! {/* <-- ушул сообщениени чыгарабыз */}
+            </h1>
           )}
         </ul>
       </div>

@@ -11,6 +11,7 @@ const MainContent = ({
   movieSetState,
 }) => {
   const transformedMovies = movies.map((movie) => {
+    // бут бологон кинолорду MovieItem ге айландырып transformedMovies деген переменный сактап жатабыз
     return (
       <MovieItem
         key={movie.id}
@@ -27,9 +28,11 @@ const MainContent = ({
       />
     );
   });
+
   return (
     <main>
-      {transformedMovies.length ? (
+      {/* Условный рендеринг */}
+      {transformedMovies.length ? ( // тудудагы дай эле
         transformedMovies
       ) : (
         <h1>You don't have any movies!</h1>

@@ -40,8 +40,11 @@ function App() {
   const [imageUrl, setImageUrl] = useState("");
   const [rating, setRating] = useState("");
 
-  const saveOrUpdateMovie = (newMovie, saveOrUpdate) => {
-    if (saveOrUpdate !== "update") {
+  const saveOrUpdateMovie = (newMovie, saveOrUpdate) => { 
+    /* 
+    Бул функциянын ичинде биз либо бар болгон кинону озгортобуз же жаныны сактайбыз жана модальный окнону жабабыз
+     */
+    if (saveOrUpdate !== "update") { 
       setMovies((prevMovies) => [...prevMovies, newMovie]);
     } else {
       const updatedMovies = movies.map((movie) => {
